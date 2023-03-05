@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+    <head>
+        <title>Formulário de Contato</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
+    </head>
+
+    <body>
+        <div class="container mx-auto bg-light mt-1 w-90">
+            <header class="row">
+                <div id="barra_acessibilidade" class="col-12 d-none">
+                    <ul id="atalhos">
+                        <li><a href="#menu" accesskey="1">Ir para menu [1]</a></li>
+                        <li><a href="#formulario" accesskey="2">Ir para formulário [2]</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-sm-3">
+                    <img src="fototeste.png" alt="Logotipo da empresa com dois triângulos sobrepostos." height="150" width="150" style="margin-top: 20px;" />
+                </div>
+
+                <div class="col-sm-9">
+                    <h1 class="text-left" style="font-size: 55px; margin-left: 80px; margin-top: 30px;">EMPRESA XPTO</h1>
+                </div>
+            </header>
+
+            <section class="row">
+                <div class="col-12">
+                    <h2 id="menu" class="d-none">Menu</h2>
+                </div>
+                <div class="col-12">
+                    <nav class="navbar navbar-expand-lg navbar-light bg-ligth">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarsuportado" aria-controls="conteudoNavbarsuportado" aria-expanded="true">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="navbar-collapse collapse" id="conteudoNavbarsuportado">
+                            <ul class="navbar-nav mx-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Home <span class="sr-only">(pagina atual)</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Contato</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+
+                <article class="col-12">
+                    <h3 id="formulario">Formulário de Contato</h3>
+
+                    <form class="needs-validation" action="#" method="post" novalidate>
+                        <div class="form-row">
+                            <label for="validationCustom01" class="col-sm-2 col-form-label col-form-label">Nome*</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control form-control-sm" id="validationCustom01" placeholder="Nome" required />
+                                <div class="invalid-feedback">
+                                    Campo nome obrigatório.
+                                </div>
+                                <div class="valid-feedback">
+                                    Tudo ok.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <label for="validationCustom02" class="col-sm-2 col-form-label col-form-label">E-mail*</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control form-control-sm" id="validationCustom02" placeholder="E-mail" required />
+                                <div class="invalid-feedback">
+                                    Campo E-mail obrigatório.
+                                </div>
+                                <div class="valid-feedback">
+                                    Tudo ok.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <label for="validationCustom03" class="col-sm-2 col-form-label col-form-label">Mensagem*</label>
+                            <div class="col-sm-10">
+                                <textarea class="form-control form-control-sm" id="validationCustom03" required></textarea>
+                                <div class="invalid-feedback">
+                                    Mensagem obrigatória.
+                                </div>
+                                <div class="valid-feedback">
+                                    Tudo ok.
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary my-1float-left">Enviar</button>
+                        <p style="color: rgb(109, 107, 107); font-size: 16px;">*Campos Obrigatórios</p>
+                    </form>
+                </article>
+            </section>
+
+            <footer class="row">
+                <div class="col-12">
+                    <p>Copyright © 2021</p>
+                </div>
+            </footer>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <script>
+            (function () {
+                "use strict";
+                window.addEventListener(
+                    "load",
+                    function () {
+                        var forms = document.getElementsByClassName("needs-validation");
+
+                        var validation = Array.prototype.filter.call(forms, function (form) {
+                            form.addEventListener(
+                                "submit",
+                                function (event) {
+                                    if (form.checkValidity() === false) {
+                                        event.preventDefault();
+                                        event.stopPropagation();
+                                    }
+                                    form.classList.add("was-validated");
+                                },
+                                false
+                            );
+                        });
+                    },
+                    false
+                );
+            })();
+        </script>
+        <noscript>Atualize seu navegador</noscript>
+    </body>
+</html>
